@@ -22,13 +22,10 @@ class Board
   def self.XOBoard(number, symbol)
     if @@row1.include?(number)
       @@row1[@@row1.index(number)] = symbol
-
     elsif @@row2.include?(number)
       @@row2[@@row2.index(number)] = symbol
-    
     elsif @@row3.include?(number)
       @@row3[@@row3.index(number)] = symbol
-
     else
       puts "Invalid move"
 
@@ -40,7 +37,3 @@ class Board
 
 end
 
-# Check
-
-# board1 = Board.new
-# board1.print_board

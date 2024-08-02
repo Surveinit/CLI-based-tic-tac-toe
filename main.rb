@@ -1,9 +1,9 @@
 require_relative "board"
 require_relative "victory_checker"
 
-while true
+Board.dummy_board
 
-  Board.dummy_board
+while true
 
   # Player 1
   print ">Choose your move X: "
@@ -11,16 +11,21 @@ while true
   Board.XOBoard(move, 'X')
   
   if VictoryCheck.check_win('X') == true
-    return puts "X won"
+    puts "X won"
+    break
   end
   
-  puts "-----------"
 
   # Player 2  
   print ">Choose your move O: "
   move = gets.chomp.to_i
   Board.XOBoard(move, 'O')
-  VictoryCheck.check_win('X')
-  puts "-----------"  
+  
+  if VictoryCheck.check_win('O') == true
+    puts "O won"
+    break
+  end
+
+  puts "----------------------"  
 
 end
