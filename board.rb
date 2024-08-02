@@ -13,10 +13,21 @@ class Board
     puts "7 | 8 | 9"  
   end
   
+  def self.color(cell)
+    case cell 
+    when 'X'
+      cell.colorize(:green)
+    when 'O'
+      cell.colorize(:red)
+    else
+      cell.to_s
+    end
+  end
+
   def self.print_board
-    puts @@row1.join(" | ")
-    puts @@row2.join(" | ")
-    puts @@row3.join(" | ")
+    puts @@row1.map {|cell| color(cell)}.join(" | ")
+    puts @@row2.map {|cell| color(cell)}.join(" | ")
+    puts @@row3.map {|cell| color(cell)}.join(" | ")
   end
 
   def self.XOBoard(number, symbol)

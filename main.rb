@@ -12,7 +12,7 @@ while true
   Board.XOBoard(move, 'X')
   
   if VictoryCheck.check_win('X') == true
-    puts "X won"
+    puts "~ X won ~".colorize(:yellow)
     break
   end
   
@@ -23,7 +23,7 @@ while true
   Board.XOBoard(move, 'O')
   
   if VictoryCheck.check_win('O') == true
-    puts "O won"
+    puts "~ O won ~".colorize(:yellow)
     break
   end
 
