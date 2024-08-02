@@ -68,14 +68,9 @@ bundle install
 
 ```sh
 
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/Surveinit/CLI-based-tic-tac-toe.git
 
 ```
-
-  
-
-Replace `your-username` and `your-repository` with the appropriate names.
-
   
 
 2.  **Navigate to the Project Directory**:
