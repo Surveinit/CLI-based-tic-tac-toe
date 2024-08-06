@@ -1,4 +1,3 @@
-
 # 🔲🔳 CLI base Tic-Tac-Toe
 
 The classic on Command line written in Ruby.
@@ -9,21 +8,15 @@ The classic on Command line written in Ruby.
 ```
 .
 
-├── board.rb
-
-├── Gemfile
-
-├── Gemfile.lock
+├── lib
+  ├── board.rb
+  ├── victory_checker.rb
 
 ├── main.rb
 
 └── README.md
 
-├── victory_checker.rb
-
-```
-
-  
+```  
 
 # 🧭 How to Run This Project
   
@@ -44,19 +37,7 @@ The classic on Command line written in Ruby.
 
 gem install bundler
 
-```
-
-3.  **Colorize**: Install Colorize gem through Gemfile.
-
-  
-
-```sh
-
-bundle install
-
-```
-
-  
+```  
 
 ## > Getting Started
 
@@ -79,7 +60,7 @@ git clone https://github.com/Surveinit/CLI-based-tic-tac-toe.git
 
 ```sh
 
-cd your-repository
+cd CLI-BASED-TIC-TAC-TOE
 
 ```
 
@@ -178,4 +159,4 @@ X | X | X
 
   
 
-### SPECIAL THANKS TO [THEODINPROJECT](https://www.theodinproject.com).
+### HEARTFELT THANKS TO [THEODINPROJECT](https://www.theodinproject.com).

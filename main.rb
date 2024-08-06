@@ -14,7 +14,7 @@ while true
   puts ""
   
   if VictoryCheck.check_win('X') == true
-    puts "~ X won ~".colorize(:yellow)
+    puts "~ X won ~".colorize(:color => :black, :background => :light_yellow)
     break
   end
   
@@ -27,10 +27,10 @@ while true
   puts ""
 
   if VictoryCheck.check_win('O') == true
-    puts "~ O won ~".colorize(:yellow)
+    puts "~ O won ~".colorize(:color => :black, :background => :light_yellow)
     break
   end
 
-  puts "----------------------"  
+  puts "-"*22  
 
 end
