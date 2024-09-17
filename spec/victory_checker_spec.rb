@@ -89,5 +89,37 @@ describe VictoryCheck do
 
     end
 
+    context 'board reads X X X diagnol' do
+      let(:board) {instance_double(Board)}
+      subject(:victory_check) { described_class.new(board) }
+
+      it 'with left to right' do
+        allow(board).to receive(:flatten_board).and_return(['X', 2, 3, 4, 'X', 6, 7, 8, 'X'])
+        expect(victory_check.check_win('X')).to eq(true)
+      end
+      
+      it 'with right to left' do
+        allow(board).to receive(:flatten_board).and_return([1, 2, 'X', 4, 'X', 6, 'X', 8, 9])
+        expect(victory_check.check_win('X')).to eq(true)
+      end
+
+    end
+
+    context 'board reads 0 diagnol' do
+      let(:board) {instance_double(Board)}
+      subject(:victory_check) { described_class.new(board) }
+
+      it 'with left to right' do
+        allow(board).to receive(:flatten_board).and_return(['0', 2, 3, 4, '0', 6, 7, 8, '0'])
+        expect(victory_check.check_win('0')).to eq(true)
+      end
+      
+      it 'with right to left' do
+        allow(board).to receive(:flatten_board).and_return([1, 2, '0', 4, '0', 6, '0', 8, 9])
+        expect(victory_check.check_win('0')).to eq(true)
+      end
+
+    end
+
   end
 end
