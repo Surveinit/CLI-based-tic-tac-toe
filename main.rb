@@ -1,6 +1,6 @@
 require 'colorize'
-require_relative "board"
-require_relative "victory_checker"
+require_relative "lib/board"
+require_relative "lib/victory_checker"
 
 Board.dummy_board
 
