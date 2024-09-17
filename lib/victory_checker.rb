@@ -13,7 +13,7 @@ class VictoryCheck
   [2, 4, 6]
 ]
 
-  def self.check_win(symbol)
+  def check_win(symbol)
     flattened_board = Board.flatten_board
 
     WIN_PATTERNS.each do |pattern|

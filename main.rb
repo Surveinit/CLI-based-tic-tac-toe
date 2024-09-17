@@ -4,6 +4,8 @@ require_relative "lib/victory_checker"
 
 Board.dummy_board
 
+victory_check = VictoryCheck.new()
+
 while true
 
   # Player 1
@@ -13,7 +15,7 @@ while true
   Board.XOBoard(move, 'X')
   puts ""
   
-  if VictoryCheck.check_win('X') == true
+  if victory_check.check_win('X') == true
     puts " ~ X won ~ ".colorize(:color => :black, :background => :light_yellow)
     break
   end
@@ -26,7 +28,7 @@ while true
   Board.XOBoard(move, 'O')
   puts ""
 
-  if VictoryCheck.check_win('O') == true
+  if victory_check.check_win('O') == true
     puts " ~ O won ~ ".colorize(:color => :black, :background => :light_yellow)
     break
   end
