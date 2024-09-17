@@ -73,18 +73,18 @@ describe VictoryCheck do
       subject(:victory_check) { described_class.new(board) }
 
       it 'with top row' do
-        allow(board).to receive(:flatten_board).and_return(['0', 2, 3, '0', 5, 6, '0', 8, 9])
-        expect(victory_check.check_win('0')).to eq(true)
+        allow(board).to receive(:flatten_board).and_return(['O', 2, 3, 'O', 5, 6, 'O', 8, 9])
+        expect(victory_check.check_win('O')).to eq(true)
       end
       
       it 'with middle row' do
-        allow(board).to receive(:flatten_board).and_return([1, '0', 3, 4, '0', 6, 7, '0', 9])
-        expect(victory_check.check_win('0')).to eq(true)
+        allow(board).to receive(:flatten_board).and_return([1, 'O', 3, 4, 'O', 6, 7, 'O', 9])
+        expect(victory_check.check_win('O')).to eq(true)
       end
       
       it 'with bottom row' do
-        allow(board).to receive(:flatten_board).and_return([1, 2, '0', 4, 5, '0', 7, 8, '0'])
-        expect(victory_check.check_win('0')).to eq(true)
+        allow(board).to receive(:flatten_board).and_return([1, 2, 'O', 4, 5, 'O', 7, 8, 'O'])
+        expect(victory_check.check_win('O')).to eq(true)
       end
 
     end
@@ -105,18 +105,18 @@ describe VictoryCheck do
 
     end
 
-    context 'board reads 0 diagnol' do
+    context 'board reads O diagnol' do
       let(:board) {instance_double(Board)}
       subject(:victory_check) { described_class.new(board) }
 
       it 'with left to right' do
-        allow(board).to receive(:flatten_board).and_return(['0', 2, 3, 4, '0', 6, 7, 8, '0'])
-        expect(victory_check.check_win('0')).to eq(true)
+        allow(board).to receive(:flatten_board).and_return(['O', 2, 3, 4, 'O', 6, 7, 8, 'O'])
+        expect(victory_check.check_win('O')).to eq(true)
       end
       
       it 'with right to left' do
-        allow(board).to receive(:flatten_board).and_return([1, 2, '0', 4, '0', 6, '0', 8, 9])
-        expect(victory_check.check_win('0')).to eq(true)
+        allow(board).to receive(:flatten_board).and_return([1, 2, 'O', 4, 'O', 6, 'O', 8, 9])
+        expect(victory_check.check_win('O')).to eq(true)
       end
 
     end
