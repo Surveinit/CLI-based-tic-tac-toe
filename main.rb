@@ -2,9 +2,11 @@ require 'colorize'
 require_relative "lib/board"
 require_relative "lib/victory_checker"
 
-Board.dummy_board
 
-victory_check = VictoryCheck.new()
+board = Board.new()
+victory_check = VictoryCheck.new(board)
+
+board.dummy_board
 
 while true
 

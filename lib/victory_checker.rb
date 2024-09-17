@@ -13,14 +13,16 @@ class VictoryCheck
   [2, 4, 6]
 ]
 
+  def initialize(board)
+    @board = board
+  end
+
   def check_win(symbol)
-    flattened_board = Board.flatten_board
+    flattened_board = @board.flatten_board
 
     WIN_PATTERNS.each do |pattern|
-      if pattern.all? {|index| flattened_board[index] == symbol} 
-        return true
-      end
+      return true if pattern.all? {|index| flattened_board[index] == symbol}
     end
+    false
   end
-  false
 end

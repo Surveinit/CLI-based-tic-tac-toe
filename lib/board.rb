@@ -3,11 +3,11 @@ class Board
   @@row2 = [4,5,6]
   @@row3 = [7,8,9]
 
-  def self.flatten_board
+  def flatten_board
     @@row1+@@row2+@@row3
   end
 
-  def self.dummy_board
+  def dummy_board
     puts "1 | 2 | 3"   
     puts "4 | 5 | 6"    
     puts "7 | 8 | 9"  
