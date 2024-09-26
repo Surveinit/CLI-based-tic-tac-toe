@@ -1,3 +1,5 @@
+# Board class, display board, Modify board.
+
 class Board
   @@row1 = [1,2,3]
   @@row2 = [4,5,6]
